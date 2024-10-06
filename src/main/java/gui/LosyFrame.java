@@ -12,14 +12,21 @@ public class LosyFrame extends JFrame {
     }
 
     private void initComponents() {
+        this.setTitle(ConstanceUtil.APPLICATION_TITLE);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setLayout(new BorderLayout());
+
+        final SideMenu sideMenu = new SideMenu();
+        this.add(new TopPanel(), BorderLayout.NORTH);
+        this.add(sideMenu, BorderLayout.WEST);
+        this.add(new MainPanel(sideMenu), BorderLayout.CENTER);
+
         final Toolkit toolkit = Toolkit.getDefaultToolkit();
         final Dimension screenSize = toolkit.getScreenSize();
-        setMaximumSize(screenSize);
-        setSize(screenSize);
+        this.setMaximumSize(screenSize);
+        this.setSize(screenSize);
 
-        setTitle(ConstanceUtil.APPLICATION_TITLE);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null);
-        setVisible(true);
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
     }
 }
