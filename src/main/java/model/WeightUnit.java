@@ -1,4 +1,7 @@
 package model;
 
-public class WeightUnit {
+public enum WeightUnit {
+    Ton,
+    Kilogram,
+    Gram
 }

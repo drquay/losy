@@ -1,3 +1,7 @@
+package gui;
+
+import utils.ConstanceUtil;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -13,13 +17,9 @@ public class LosyFrame extends JFrame {
         setMaximumSize(screenSize);
         setSize(screenSize);
 
-        setTitle("Losy");
+        setTitle(ConstanceUtil.APPLICATION_TITLE);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);
-    }
-
-    public static void main(String[] args) {
-        java.awt.EventQueue.invokeLater(() -> new LosyFrame().setVisible(true));
     }
 }
