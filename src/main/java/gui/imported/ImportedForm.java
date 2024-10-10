@@ -45,10 +45,8 @@ public class ImportedForm extends JPanel {
     private JPanel personInfo() {
         final JPanel panel = commonPanel(IMPORTED_COMMODITY_PANEL);
 
-        final JLabel datetimeLbl = new JLabel(IMPORTED_DATETIME_LABEL);
-        final JTextField datetimeTf = new JTextField(10);
-        datetimeTf.setEnabled(false);
-        datetimeTf.setText(LocalDateTime.now().format(DateTimeFormatter.ofPattern(DATETIME_FORMAT)));
+//        final JLabel datetimeLbl = new JLabel(IMPORTED_DATETIME_LABEL);
+//        final JLabel datetimeTf = new JLabel(LocalDateTime.now().format(DateTimeFormatter.ofPattern(DATETIME_FORMAT)));
 
         final JLabel commodityTypeLbl = new JLabel(IMPORTED_COMMODITY_TYPE_LABEL);
         final JComboBox<String> commodityTypeCbx = new JComboBox<>(COMMODITY_TYPES);
@@ -70,8 +68,8 @@ public class ImportedForm extends JPanel {
         final JTextField allowanceTf = new JTextField(10);
         allowanceTf.setText(IMPORTED_WEIGHT_PLACEHOLDER);
 
-        panel.add(datetimeLbl);
-        panel.add(datetimeTf);
+//        panel.add(datetimeLbl);
+//        panel.add(datetimeTf);
         panel.add(commodityTypeLbl);
         panel.add(commodityTypeCbx);
         panel.add(customerLbl);
