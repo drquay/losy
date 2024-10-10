@@ -16,8 +16,8 @@ public class LosyFrame extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(new BorderLayout());
 
-        this.add(new SideMenu(new LogoPanel()), BorderLayout.WEST);
-        this.add(new MainPanel(), BorderLayout.CENTER);
+        this.add(new SideMenuPanel(new LogoPanel()), BorderLayout.WEST);
+        this.add(new ImportPanel(), BorderLayout.CENTER);
 
         final Toolkit toolkit = Toolkit.getDefaultToolkit();
         final Dimension screenSize = toolkit.getScreenSize();

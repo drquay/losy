@@ -12,6 +12,7 @@ public interface ConstanceUtil {
     String CALCULATOR_ICON_PATH = "/images/calculator.svg";
     String CUSTOMER_ICON_PATH = "/images/customer.svg";
     String DRIVER_ICON_PATH = "/images/driver.svg";
+    String REPORT_ICON_PATH = "/images/report.svg";
 
     Color panel = new Color(37, 150, 190);
     Color background = new Color(37, 150, 190);

@@ -4,5 +4,5 @@ public enum Commodity {
     Corn,
     Pepper,
     Coffee,
-    Cassava
+    Cassava //hat dieu
 }
