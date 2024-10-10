@@ -7,7 +7,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "settings")
-public class Settings {
+public class Setting {
 
     @Id
     @Column(name = "key")
@@ -16,10 +16,10 @@ public class Settings {
     @Column(name = "value")
     private String value;
 
-    public Settings() {
+    public Setting() {
     }
 
-    public Settings(String key, String value) {
+    public Setting(String key, String value) {
         this.key = key;
         this.value = value;
     }

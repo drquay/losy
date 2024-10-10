@@ -1,6 +1,6 @@
 package services;
 
-import model.Settings;
+import model.Setting;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import utils.HibernateUtil;
@@ -14,7 +14,7 @@ public class SettingService {
         Transaction transaction = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             transaction = session.beginTransaction();
-            session.merge(new Settings(key, value));
+            session.merge(new Setting(key, value));
             transaction.commit();
             System.out.println("Setting saved successfully.");
         } catch (Exception e) {
@@ -26,11 +26,11 @@ public class SettingService {
         return Optional.of(key);
     }
 
-    public List<Settings> getAll() {
+    public List<Setting> getAll() {
         Transaction transaction = null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             transaction = session.beginTransaction();
-            return session.createQuery("FROM Settings", Settings.class).getResultList();
+            return session.createQuery("FROM Settings", Setting.class).getResultList();
         } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();

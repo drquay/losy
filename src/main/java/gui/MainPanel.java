@@ -2,38 +2,24 @@ package gui;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class MainPanel extends JPanel {
 
-    private SideMenu sideMenu;
-
-    public MainPanel(SideMenu sideMenu) {
+    public MainPanel() {
         super();
-        this.sideMenu = sideMenu;
+        this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
-        this.setLayout(new BorderLayout());
-        JButton collapseButton = new JButton("Collapse Menu");
-        collapseButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                sideMenu.setVisible(!sideMenu.isVisible());
-                collapseButton.setText(sideMenu.isVisible() ? "Collapse Menu" : "Expand Menu");
-            }
-        });
-
-        String[] columnNames = {"ID", "Name", "Age"};
+        String[] columnNames = {"Số thứ tự", "Ngày giờ", "Tên khách hàng", "Tài xế", "Loại hàng", "Số lượng", "Đơn giá", "Trừ bì", "Thành tiền", "Thanh Toán", "In Phiếu"};
         Object[][] data = {
-                {"1", "John Doe", "30"},
-                {"2", "Jane Smith", "25"},
-                {"3", "Mike Johnson", "35"}
+                {"01","01-01-2024 17:00", "John Doe", "Tài 1", "Bắp", "30 Tấn", "4000 vnđ", "150 kg", "119.400.000 vnđ", "Đã thanh toán đủ", "Yes"},
+                {"02","01-01-2024 16:00", "Liam Doe", "Tài 2", "Bắp", "30 Tấn", "4000 vnđ", "150 kg", "119.400.000 vnđ", "Thiếu", "Yes"},
+                {"03","01-01-2024 08:00", "Mỡ", "Tài 3", "Bắp", "30 Tấn", "4000 vnđ", "150 kg", "119.400.000 vnđ", "Đã thanh toán 10.000.000 vnđ", "Yes"},
+                {"03","01-01-2024 08:00", "Mỡ", "Tài 4", "Bắp", "30 Tấn", "4000 vnđ", "150 kg", "119.400.000 vnđ", "Đã thanh toán 20.000.000 vnđ", "Yes"}
         };
 
-        JTable table = new JTable(data, columnNames);
-        JScrollPane tableScrollPane = new JScrollPane(table);
+        final JTable table = new JTable(data, columnNames);
+        final JScrollPane tableScrollPane = new JScrollPane(table);
 
-        // Add the collapse button and table to the main panel
-        this.add(collapseButton, BorderLayout.NORTH);
         this.add(tableScrollPane, BorderLayout.CENTER);
     }
 }
