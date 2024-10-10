@@ -6,7 +6,7 @@ public interface Constance {
 
     String DATETIME_FORMAT = "dd-MM-yyyy HH:mm";
     String[] COMMODITY_TYPES = {"BẮP", "CÀ PHÊ", "TIÊU", "ĐIỀU"};
-    String[] PAYMENT_TYPES = {"TIỀN MẶT", "CHUYỂN KHOẢN"};
+    String[] PAYMENT_TYPES = {"TIỀN MẶT", "CHUYỂN KHOẢN", "NỢ"};
 
     String IMPORTED_DATETIME_LABEL = "Ngày giờ nhập hàng";
     String IMPORTED_COMMODITY_TYPE_LABEL = "Loại hàng";
@@ -20,10 +20,7 @@ public interface Constance {
     String IMPORTED_NET_WEIGHT_LABEL = "Trọng lượng đã trừ bì (kg)";
     String IMPORTED_PAYMENT_LABEL = "Thành tiền (vnd)";
     String IMPORTED_TYPE_OF_PAYMENT = "Thanh toán bằng";
-    String IMPORTED_PAYMENT_COMPLETED_STATUS_LABEL = "Thanh toán đủ";
-    String IMPORTED_PAYMENT_INFO_LABEL = "Thông tin thanh toán";
-    String IMPORTED_PAYMENT_NOT_COMPLETED_STATUS_LABEL = "Thiếu";
-    String IMPORTED_PAYMENT_HAFT_COMPLETED_STATUS_LABEL = "Thanh một phần";
+    String IMPORTED_PAYMENT_INFO_LABEL = "Số tiền đã thanh toán";
     String IMPORTED_NOTE_LABEL = "Ghi chú";
     String IMPORTED_WEIGHT_PLACEHOLDER = "0";
 
@@ -48,6 +45,6 @@ public interface Constance {
     String DRIVER_ICON_PATH = "/images/driver.svg";
     String REPORT_ICON_PATH = "/images/report.svg";
 
-    Color sideMenuPanelBackground = new Color(37, 150, 190);
+    Color sideMenuPanelBackground = new Color(60, 60, 60);
     Font applicationFont = new Font("Arial", Font.PLAIN, 16);
 }

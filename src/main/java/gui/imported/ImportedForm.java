@@ -20,11 +20,8 @@ import static utils.Constance.IMPORTED_DRIVER_LABEL;
 import static utils.Constance.IMPORTED_DRIVER_PLACEHOLDER;
 import static utils.Constance.IMPORTED_NET_WEIGHT_LABEL;
 import static utils.Constance.IMPORTED_NOTE_LABEL;
-import static utils.Constance.IMPORTED_PAYMENT_COMPLETED_STATUS_LABEL;
-import static utils.Constance.IMPORTED_PAYMENT_HAFT_COMPLETED_STATUS_LABEL;
 import static utils.Constance.IMPORTED_PAYMENT_INFO_LABEL;
 import static utils.Constance.IMPORTED_PAYMENT_LABEL;
-import static utils.Constance.IMPORTED_PAYMENT_NOT_COMPLETED_STATUS_LABEL;
 import static utils.Constance.IMPORTED_PAYMENT_PANEL;
 import static utils.Constance.IMPORTED_PRICE_LABEL;
 import static utils.Constance.IMPORTED_TYPE_OF_PAYMENT;
@@ -111,17 +108,7 @@ public class ImportedForm extends JPanel {
         final JTextField noteTa = new JTextField(10);
 
         final JLabel paymentInfoLbl = new JLabel(IMPORTED_PAYMENT_INFO_LABEL);
-
-        final JPanel payment = new JPanel();
-        payment.setLayout(new GridLayout(1, 1));
-
-        final JCheckBox completedPaymentCb = new JCheckBox(IMPORTED_PAYMENT_COMPLETED_STATUS_LABEL);
-        final JCheckBox nonCompletedPaymentCb = new JCheckBox(IMPORTED_PAYMENT_NOT_COMPLETED_STATUS_LABEL);
-        final JCheckBox haftCompletedPaymentCb = new JCheckBox(IMPORTED_PAYMENT_HAFT_COMPLETED_STATUS_LABEL);
-
-        payment.add(completedPaymentCb);
-        payment.add(nonCompletedPaymentCb);
-        payment.add(haftCompletedPaymentCb);
+        final JTextField paymentInfoTa = new JTextField(10);
 
         panel.add(netWeightLbl);
         panel.add(netWeightTf);
@@ -132,7 +119,7 @@ public class ImportedForm extends JPanel {
         panel.add(typePaymentLbl);
         panel.add(typePaymentCbx);
         panel.add(paymentInfoLbl);
-        panel.add(payment);
+        panel.add(paymentInfoTa);
         panel.add(noteLbl);
         panel.add(noteTa);
 
