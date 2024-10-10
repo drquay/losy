@@ -1,14 +1,14 @@
 package gui;
 
-import gui.imported.ImportPanel;
+import gui.imported.ImportedTable;
 import utils.Constance;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class LosyFrame extends JFrame {
+public class LosyWindow extends JFrame {
 
-    public LosyFrame() {
+    public LosyWindow() {
         initComponents();
     }
 
@@ -17,8 +17,8 @@ public class LosyFrame extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(new BorderLayout());
 
-        this.add(new SideMenuPanel(new LogoPanel()), BorderLayout.WEST);
-        this.add(new ImportPanel(), BorderLayout.CENTER);
+        this.add(new SideMenu(new Logo()), BorderLayout.WEST);
+        this.add(new ImportedTable(), BorderLayout.CENTER);
 
         final Toolkit toolkit = Toolkit.getDefaultToolkit();
         final Dimension screenSize = toolkit.getScreenSize();

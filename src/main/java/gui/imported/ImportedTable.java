@@ -3,9 +3,9 @@ package gui.imported;
 import javax.swing.*;
 import java.awt.*;
 
-public class ImportPanel extends JPanel {
+public class ImportedTable extends JPanel {
 
-    public ImportPanel() {
+    public ImportedTable() {
         super();
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
@@ -19,7 +19,6 @@ public class ImportPanel extends JPanel {
 
         final JTable table = new JTable(data, columnNames);
         final JScrollPane tableScrollPane = new JScrollPane(table);
-
         this.add(tableScrollPane, BorderLayout.CENTER);
     }
 }

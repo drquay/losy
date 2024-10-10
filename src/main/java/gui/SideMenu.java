@@ -17,10 +17,10 @@ import static utils.Constance.IMPORTED_BUTTON_LABEL;
 import static utils.Constance.INCOME_EXPENSE_BUTTON_LABEL;
 import static utils.Constance.REPORT_BUTTON_LABEL;
 
-public class SideMenuPanel extends JPanel {
+public class SideMenu extends JPanel {
 
-    private LogoPanel logo;
-    public SideMenuPanel(LogoPanel logo) {
+    private Logo logo;
+    public SideMenu(Logo logo) {
         super();
         this.logo = logo;
         this.setPreferredSize(new Dimension(200, super.getHeight()));

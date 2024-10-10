@@ -9,10 +9,10 @@ import java.awt.*;
 import java.nio.charset.StandardCharsets;
 import java.util.Optional;
 
-public class LogoPanel extends JPanel {
+public class Logo extends JPanel {
 
     private JLabel logo;
-    public LogoPanel() {
+    public Logo() {
         super();
 
         this.setLayout(new FlowLayout(FlowLayout.CENTER));
