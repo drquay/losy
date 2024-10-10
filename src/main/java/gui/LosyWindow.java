@@ -1,5 +1,6 @@
 package gui;
 
+import gui.imported.ImportWindow;
 import gui.imported.ImportedTable;
 import utils.Constance;
 
@@ -18,7 +19,7 @@ public class LosyWindow extends JFrame {
         this.setLayout(new BorderLayout());
 
         this.add(new SideMenu(new Logo()), BorderLayout.WEST);
-        this.add(new ImportedTable(), BorderLayout.CENTER);
+        this.add(new ImportWindow(), BorderLayout.CENTER);
 
         final Toolkit toolkit = Toolkit.getDefaultToolkit();
         final Dimension screenSize = toolkit.getScreenSize();

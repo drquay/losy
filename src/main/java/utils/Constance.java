@@ -4,6 +4,32 @@ import java.awt.*;
 
 public interface Constance {
 
+    String DATETIME_FORMAT = "dd-MM-yyyy HH:mm";
+    String[] COMMODITY_TYPES = {"BẮP", "CÀ PHÊ", "TIÊU", "ĐIỀU"};
+    String[] PAYMENT_TYPES = {"TIỀN MẶT", "CHUYỂN KHOẢN"};
+
+    String IMPORTED_DATETIME_LABEL = "Ngày giờ nhập hàng";
+    String IMPORTED_COMMODITY_TYPE_LABEL = "Loại hàng";
+    String IMPORTED_CUSTOMER_LABEL = "Khách hàng";
+    String IMPORTED_CUSTOMER_PLACEHOLDER = "Nhập tên khách hàng";
+    String IMPORTED_DRIVER_LABEL = "Tài xế";
+    String IMPORTED_DRIVER_PLACEHOLDER = "Nhập tên tài xế";
+    String IMPORTED_WEIGHT_LABEL = "Trọng lượng hàng (kg)";
+    String IMPORTED_PRICE_LABEL = "Đơn giá (vnd/kg)";
+    String IMPORTED_ALLOWANCE_LABEL = "Trừ bì";
+    String IMPORTED_NET_WEIGHT_LABEL = "Trọng lượng đã trừ bì (kg)";
+    String IMPORTED_PAYMENT_LABEL = "Thành tiền (vnd)";
+    String IMPORTED_TYPE_OF_PAYMENT = "Thanh toán bằng";
+    String IMPORTED_PAYMENT_COMPLETED_STATUS_LABEL = "Thanh toán đủ";
+    String IMPORTED_PAYMENT_INFO_LABEL = "Thông tin thanh toán";
+    String IMPORTED_PAYMENT_NOT_COMPLETED_STATUS_LABEL = "Thiếu";
+    String IMPORTED_PAYMENT_HAFT_COMPLETED_STATUS_LABEL = "Thanh một phần";
+    String IMPORTED_NOTE_LABEL = "Ghi chú";
+    String IMPORTED_WEIGHT_PLACEHOLDER = "0";
+
+    String IMPORTED_COMMODITY_PANEL = "thông tin hàng hoá";
+    String IMPORTED_PAYMENT_PANEL = "thông tin thanh toán";
+
     String REPORT_BUTTON_LABEL = "BÁO CÁO";
     String DRIVER_BUTTON_LABEL = "TÀI XẾ";
     String IMPORTED_BUTTON_LABEL = "NHẬP HÀNG";
