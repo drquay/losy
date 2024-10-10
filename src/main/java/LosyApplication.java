@@ -1,13 +1,13 @@
 import gui.LosyFrame;
-import utils.ConstanceUtil;
-import utils.OtherUtil;
+import utils.Constance;
+import utils.Util;
 
 import javax.swing.plaf.FontUIResource;
 
 public class LosyApplication {
 
     public static void main(String[] args) {
-        OtherUtil.setUIFont(new FontUIResource(ConstanceUtil.systemFont));
+        Util.setUIFont(new FontUIResource(Constance.applicationFont));
         java.awt.EventQueue.invokeLater(() -> new LosyFrame().setVisible(true));
     }
 }

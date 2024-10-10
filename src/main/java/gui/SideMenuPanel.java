@@ -1,13 +1,21 @@
 package gui;
 
-import utils.ConstanceUtil;
-import utils.OtherUtil;
+import utils.Constance;
+import utils.Util;
 
 import javax.swing.*;
 import java.awt.*;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.Optional;
+
+import static utils.Constance.CALCULATOR_BUTTON_LABEL;
+import static utils.Constance.CUSTOMER_BUTTON_LABEL;
+import static utils.Constance.DRIVER_BUTTON_LABEL;
+import static utils.Constance.EXPORTED_BUTTON_LABEL;
+import static utils.Constance.IMPORTED_BUTTON_LABEL;
+import static utils.Constance.INCOME_EXPENSE_BUTTON_LABEL;
+import static utils.Constance.REPORT_BUTTON_LABEL;
 
 public class SideMenuPanel extends JPanel {
 
@@ -17,15 +25,15 @@ public class SideMenuPanel extends JPanel {
         this.logo = logo;
         this.setPreferredSize(new Dimension(200, super.getHeight()));
         this.setLayout(new FlowLayout());
-        this.setBackground(ConstanceUtil.panel);
+        this.setBackground(Constance.sideMenuPanelBackground);
 
-        final JButton report = createButton("BÁO CÁO", getIcon(ConstanceUtil.REPORT_ICON_PATH, null));
-        final JButton importCommodity = createButton("NHẬP HÀNG", getIcon(ConstanceUtil.IMPORT_ICON_PATH, StandardCharsets.UTF_8));
-        final JButton exportCommodity = createButton("XUẤT HÀNG", getIcon(ConstanceUtil.EXPORT_ICON_PATH, null));
-        final JButton incomeAndExpenses = createButton("THU | CHI", getIcon(ConstanceUtil.INCOME_EXPENSE_ICON_PATH, null));
-        final JButton customer = createButton("KHÁCH HÀNG", getIcon(ConstanceUtil.CUSTOMER_ICON_PATH, null));
-        final JButton driver = createButton("TÀI XẾ", getIcon(ConstanceUtil.DRIVER_ICON_PATH, null));
-        final JButton calculator = createButton("MÁY TÍNH", getIcon(ConstanceUtil.CALCULATOR_ICON_PATH, null));
+        final JButton report = createButton(REPORT_BUTTON_LABEL, getIcon(Constance.REPORT_ICON_PATH, null));
+        final JButton importCommodity = createButton(IMPORTED_BUTTON_LABEL, getIcon(Constance.IMPORT_ICON_PATH, StandardCharsets.UTF_8));
+        final JButton exportCommodity = createButton(EXPORTED_BUTTON_LABEL, getIcon(Constance.EXPORT_ICON_PATH, null));
+        final JButton incomeAndExpenses = createButton(INCOME_EXPENSE_BUTTON_LABEL, getIcon(Constance.INCOME_EXPENSE_ICON_PATH, null));
+        final JButton customer = createButton(CUSTOMER_BUTTON_LABEL, getIcon(Constance.CUSTOMER_ICON_PATH, null));
+        final JButton driver = createButton(DRIVER_BUTTON_LABEL, getIcon(Constance.DRIVER_ICON_PATH, null));
+        final JButton calculator = createButton(CALCULATOR_BUTTON_LABEL, getIcon(Constance.CALCULATOR_ICON_PATH, null));
 
         this.add(logo);
         this.add(report);
@@ -39,7 +47,7 @@ public class SideMenuPanel extends JPanel {
 
     private Icon getIcon(String path, Charset charset) {
         charset = charset == null ? StandardCharsets.ISO_8859_1 : charset;
-        return OtherUtil.getIconFromResource(this.getClass(), new model.Icon(path, charset, 64, 64));
+        return Util.getIconFromResource(this.getClass(), new model.Icon(path, charset, 64, 64));
     }
 
     private JButton createButton(String text, Icon icon) {

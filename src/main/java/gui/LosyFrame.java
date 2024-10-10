@@ -1,6 +1,7 @@
 package gui;
 
-import utils.ConstanceUtil;
+import gui.imported.ImportPanel;
+import utils.Constance;
 
 import javax.swing.*;
 import java.awt.*;
@@ -12,7 +13,7 @@ public class LosyFrame extends JFrame {
     }
 
     private void initComponents() {
-        this.setTitle(ConstanceUtil.APPLICATION_TITLE);
+        this.setTitle(Constance.APPLICATION_TITLE);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(new BorderLayout());
 

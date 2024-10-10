@@ -1,8 +1,8 @@
 package gui;
 
 import model.Icon;
-import utils.ConstanceUtil;
-import utils.OtherUtil;
+import utils.Constance;
+import utils.Util;
 
 import javax.swing.*;
 import java.awt.*;
@@ -16,9 +16,9 @@ public class LogoPanel extends JPanel {
         super();
 
         this.setLayout(new FlowLayout(FlowLayout.CENTER));
-        this.setBackground(ConstanceUtil.panel);
+        this.setBackground(Constance.sideMenuPanelBackground);
 
-        final javax.swing.Icon logoIcon = OtherUtil.getIconFromResource(this.getClass(), new Icon(ConstanceUtil.LOGO_PATH, StandardCharsets.ISO_8859_1, 150, 150));
+        final javax.swing.Icon logoIcon = Util.getIconFromResource(this.getClass(), new Icon(Constance.LOGO_PATH, StandardCharsets.ISO_8859_1, 150, 150));
         Optional.ofNullable(logoIcon).ifPresent(ic -> logo = new JLabel(logoIcon));
 
         this.add(logo);

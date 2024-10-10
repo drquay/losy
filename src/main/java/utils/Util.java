@@ -15,7 +15,7 @@ import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.Optional;
 
-public class OtherUtil {
+public class Util {
 
     // Method to set default font for all components
     public static void setUIFont(FontUIResource f) {
