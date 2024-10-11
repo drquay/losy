@@ -5,6 +5,8 @@ import java.awt.*;
 public interface Constance {
 
     String DATETIME_FORMAT = "dd-MM-yyyy HH:mm";
+    String[] CUSTOMERS = {"Tươi", "Mỡ", "Hậu", "Cốm", "Tươi 1", "Mỡ 1", "Hậu 1", "Cốm 1"};
+    String[] DIRVERS = {"Tài", "xế mập"};
     String[] COMMODITY_TYPES = {"BẮP", "CÀ PHÊ", "TIÊU", "ĐIỀU"};
     String[] PAYMENT_TYPES = {"TIỀN MẶT", "CHUYỂN KHOẢN", "NỢ"};
 
@@ -22,7 +24,7 @@ public interface Constance {
     String IMPORTED_TYPE_OF_PAYMENT = "Thanh toán bằng";
     String IMPORTED_PAYMENT_INFO_LABEL = "Số tiền đã thanh toán";
     String IMPORTED_NOTE_LABEL = "Ghi chú";
-    String IMPORTED_WEIGHT_PLACEHOLDER = "0";
+    int IMPORTED_WEIGHT_PLACEHOLDER = 0;
 
     String IMPORTED_COMMODITY_PANEL = "thông tin hàng hoá";
     String IMPORTED_PAYMENT_PANEL = "thông tin thanh toán";

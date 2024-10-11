@@ -13,9 +13,17 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.nio.charset.Charset;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.Locale;
 import java.util.Optional;
 
 public class Util {
+
+    public static DecimalFormat getDecimalFormat() {
+        final NumberFormat numberFormat = NumberFormat.getNumberInstance(Locale.GERMAN);
+        return (DecimalFormat) numberFormat;
+    }
 
     // Method to set default font for all components
     public static void setUIFont(FontUIResource f) {
