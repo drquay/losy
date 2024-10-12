@@ -1,8 +1,8 @@
 package model;
 
-public enum Commodity {
+public enum CommodityType {
     Corn,
     Pepper,
     Coffee,
-    Cassava //hat dieu
+    Cassava
 }
