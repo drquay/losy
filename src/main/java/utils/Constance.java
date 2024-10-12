@@ -33,7 +33,7 @@ public interface Constance {
     String DRIVER_BUTTON_LABEL = "TÀI XẾ";
     String IMPORTED_BUTTON_LABEL = "NHẬP HÀNG";
     String EXPORTED_BUTTON_LABEL = "XUẤT HÀNG";
-    String CUSTOMER_BUTTON_LABEL = "KHÁCH HÀNG";
+    String CUSTOMER_BUTTON_LABEL = "ĐỐI TÁC";
     String CALCULATOR_BUTTON_LABEL = "MÁY TÍNH";
     String INCOME_EXPENSE_BUTTON_LABEL = "THU | CHI";
 

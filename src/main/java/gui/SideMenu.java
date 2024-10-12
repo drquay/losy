@@ -11,7 +11,6 @@ import java.util.Optional;
 
 import static utils.Constance.CALCULATOR_BUTTON_LABEL;
 import static utils.Constance.CUSTOMER_BUTTON_LABEL;
-import static utils.Constance.DRIVER_BUTTON_LABEL;
 import static utils.Constance.EXPORTED_BUTTON_LABEL;
 import static utils.Constance.IMPORTED_BUTTON_LABEL;
 import static utils.Constance.INCOME_EXPENSE_BUTTON_LABEL;
@@ -32,16 +31,14 @@ public class SideMenu extends JPanel {
         final JButton exportCommodity = createButton(EXPORTED_BUTTON_LABEL, getIcon(Constance.EXPORT_ICON_PATH, null));
         final JButton incomeAndExpenses = createButton(INCOME_EXPENSE_BUTTON_LABEL, getIcon(Constance.INCOME_EXPENSE_ICON_PATH, null));
         final JButton customer = createButton(CUSTOMER_BUTTON_LABEL, getIcon(Constance.CUSTOMER_ICON_PATH, null));
-        final JButton driver = createButton(DRIVER_BUTTON_LABEL, getIcon(Constance.DRIVER_ICON_PATH, null));
         final JButton calculator = createButton(CALCULATOR_BUTTON_LABEL, getIcon(Constance.CALCULATOR_ICON_PATH, null));
 
         this.add(logo);
         this.add(report);
+        this.add(incomeAndExpenses);
         this.add(importCommodity);
         this.add(exportCommodity);
-        this.add(incomeAndExpenses);
         this.add(customer);
-        this.add(driver);
         this.add(calculator);
     }
 

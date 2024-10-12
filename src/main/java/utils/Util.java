@@ -7,6 +7,7 @@ import org.apache.batik.transcoder.image.ImageTranscoder;
 
 import javax.swing.*;
 import javax.swing.plaf.FontUIResource;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -19,6 +20,22 @@ import java.util.Locale;
 import java.util.Optional;
 
 public class Util {
+
+    public static GridBagConstraints getGridBagConstraints(int x, int y, int width, int height) {
+        final GridBagConstraints gbc = new GridBagConstraints();
+
+        gbc.insets = new Insets(5, 5, 5, 5); // Set default padding
+        gbc.gridx = x;
+        gbc.gridy = y;
+
+        gbc.gridwidth = width;
+        gbc.gridheight = height;
+
+        gbc.fill = GridBagConstraints.HORIZONTAL; //The object will extend the same way in the 2 sides.
+        gbc.anchor = GridBagConstraints.NORTHWEST; // Align to top left
+
+        return gbc;
+    }
 
     public static DecimalFormat getDecimalFormat() {
         final NumberFormat numberFormat = NumberFormat.getNumberInstance(Locale.GERMAN);
