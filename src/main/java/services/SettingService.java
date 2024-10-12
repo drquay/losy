@@ -1,6 +1,6 @@
 package services;
 
-import model.Setting;
+import model.entity.Setting;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import utils.Hibernate;

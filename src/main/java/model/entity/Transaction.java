@@ -1,4 +1,4 @@
-package model;
+package model.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -10,6 +10,8 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
+import model.CommodityType;
+import model.PaymentType;
 import org.hibernate.annotations.UuidGenerator;
 
 import java.math.BigDecimal;

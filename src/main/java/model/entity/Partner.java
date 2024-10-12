@@ -1,4 +1,4 @@
-package model;
+package model.entity;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -10,6 +10,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import model.PartnerType;
 import org.hibernate.Transaction;
 import org.hibernate.annotations.UuidGenerator;
 

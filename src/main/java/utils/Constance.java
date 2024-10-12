@@ -37,7 +37,7 @@ public interface Constance {
     String CALCULATOR_BUTTON_LABEL = "MÁY TÍNH";
     String INCOME_EXPENSE_BUTTON_LABEL = "THU | CHI";
 
-    String APPLICATION_TITLE = "LOSY - ỨNG DỤNG QUẢN LÝ LÒ SẤY";
+    String APPLICATION_TITLE = "LOSY";
     String LOGO_PATH = "/images/logo.svg";
     String IMPORT_ICON_PATH = "/images/import.svg";
     String EXPORT_ICON_PATH = "/images/export.svg";

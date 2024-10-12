@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  postgres:
+    container_name: postgres_container
+    image: postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=secret
+      - PGDATA=/data/postgres
+      - POSTGRES_DB=losy
+    ports:
+      - "5432:5432"
+    volumes:
+     - db:/var/lib/postgresql/data
+volumes:
+  db:
