@@ -33,8 +33,8 @@ import static utils.Constance.PAYMENT_TYPES;
 
 public class ImportedForm extends JPanel {
 
-    private DecimalFormat decimalFormat = Util.getDecimalFormat();
-
+    private static final DecimalFormat decimalFormat = Util.getDecimalFormat();
+    
     public ImportedForm() {
         super();
         this.setLayout(new GridLayout(1, 2, 10, 10));

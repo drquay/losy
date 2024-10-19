@@ -5,21 +5,10 @@ import java.awt.*;
 
 public class ImportWindow extends JPanel {
 
-    private ImportedTable table;
-    private ImportedForm form;
-
     public ImportWindow() {
         super();
-        initComponents();
-    }
-
-    private void initComponents() {
         this.setLayout(new BorderLayout());
-
-        table = new ImportedTable();
-        form = new ImportedForm();
-
-        this.add(form, BorderLayout.NORTH);
-        this.add(table, BorderLayout.SOUTH);
+        this.add(new ImportedForm(), BorderLayout.NORTH);
+        this.add(new ImportedTable(), BorderLayout.SOUTH);
     }
 }
