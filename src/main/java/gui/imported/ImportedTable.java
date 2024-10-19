@@ -24,7 +24,7 @@ public class ImportedTable extends JPanel {
         };
         final JXTable table = new JXTable(new DefaultTableModel(rows, columns));
         table.setColumnControlVisible(true);
-        table.setHighlighters(HighlighterFactory.createSimpleStriping());
+        table.setHighlighters(HighlighterFactory.createSimpleStriping(Color.LIGHT_GRAY));
         table.setEditable(false);
         TableRowFilterSupport.forTable(table).actions(true).searchable(true).apply();
 
